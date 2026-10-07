@@ -3,262 +3,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Janaina & Chong - 19.05.2027</title>
+  <title>Chong U & Janaína - 19 May 2027 - The Edge, Bali</title>
+  <meta name="description" content="Save the date: the wedding of Chong U and Janaína, 19 May 2027 at The Edge, Bali.">
+  <meta property="og:title" content="Save the Date - Chong U & Janaína">
+  <meta property="og:description" content="19 May 2027 at The Edge, Bali.">
+  <meta property="og:image" content="images/paisagem-fundo-desktop.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="main-nav">
+  <!-- Reusable ornaments -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="sprig" viewBox="0 0 120 24">
+      <path d="M4 14c30-2 70-6 112-4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <path d="M30 13c-4-5-10-7-15-6 3 5 9 7 15 6zM52 11c2-6 7-9 12-10-1 6-6 9-12 10zM74 11c-4-5-9-8-15-7 3 5 9 8 15 7zM92 10c2-5 7-8 12-8-1 5-6 8-12 8z" fill="currentColor" opacity=".55"/>
+      <circle cx="40" cy="15" r="1.6" fill="currentColor"/><circle cx="84" cy="13" r="1.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="bloom" viewBox="0 0 24 24">
+      <path d="M12 3c2 3 2 6 0 9-2-3-2-6 0-9zM12 21c-2-3-2-6 0-9 2 3 2 6 0 9zM3 12c3-2 6-2 9 0-3 2-6 2-9 0zM21 12c-3 2-6 2-9 0 3-2 6-2 9 0z" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="12" cy="12" r="1.4" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <nav id="main-nav" aria-label="Main">
     <a href="#home">Home</a>
     <a href="#venue">Venue</a>
     <a href="#travel">Travel</a>
     <a href="#rsvp">RSVP</a>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero__image-wrapper">
-      <img
-        class="hero__image"
-        src="hero.png"
-        alt="Watercolor of The Edge, Bali"
-        width="1920"
-        height="1080"
-        fetchpriority="high"
-      >
-      <div class="hero__overlay"></div>
-      <div class="hero__fade"></div>
-    </div>
-    <div class="hero__content">
-      <p class="hero__label" data-anim="fade-down" data-anim-delay="1">We're getting married</p>
-      <h1 class="hero__names" data-anim="fade-scale" data-anim-delay="2">
-        Janaina <span class="hero__ampersand">&</span> Chong
-      </h1>
-      <div class="hero__divider" data-anim="draw-line" data-anim-delay="3"></div>
-      <p class="hero__date" data-anim="fade-up" data-anim-delay="4">May 19, 2027</p>
-      <p class="hero__location" data-anim="fade-up" data-anim-delay="5">Bali, Indonesia</p>
-    </div>
-  </section>
+  <main>
+    <!-- Hero: the save the date -->
+    <section class="hero" id="home">
+      <div class="hero__flowers" aria-hidden="true">
+        <img class="flower f-buds"     src="images/ramo-botoes-rosa-pessego.webp" alt="" width="460" height="760" style="--d:1">
+        <img class="flower f-hibiscus" src="images/hibisco-rosa.webp"             alt="" width="760" height="759" style="--d:0" fetchpriority="high">
+        <img class="flower f-orchids"  src="images/orquideas-claras.webp"         alt="" width="614" height="760" style="--d:2">
+        <img class="flower f-micro"    src="images/raminho-microflores-rosa.webp" alt="" width="658" height="760" style="--d:1">
+        <img class="flower f-lilac"    src="images/orquidea-lilas.webp"           alt="" width="741" height="760" style="--d:0">
+        <img class="flower f-white"    src="images/flor-branca-tropical.webp"     alt="" width="760" height="732" style="--d:2">
+        <img class="flower f-bird"     src="images/ave-do-paraiso.webp"           alt="" width="554" height="760" style="--d:3">
+        <img class="flower f-yellows"  src="images/ramo-flores-amarelas.webp"     alt="" width="489" height="760" style="--d:3">
+        <img class="flower f-protea"   src="images/protea-rosa.webp"              alt="" width="760" height="748" style="--d:4">
+        <img class="flower f-gold"     src="images/hibisco-amarelo.webp"          alt="" width="754" height="760" style="--d:4">
+        <img class="flower f-dotted"   src="images/orquidea-rosa-pontilhada.webp" alt="" width="758" height="760" style="--d:5">
+      </div>
 
-  <!-- Countdown Section -->
-  <section class="countdown-section" id="countdown">
-    <h2 class="countdown-section__title" data-anim="fade-up">Counting the days</h2>
-    <div class="countdown" id="countdown-timer">
-      <div class="countdown__item" data-anim="fade-up" data-anim-delay="1">
-        <span class="countdown__number" id="days">---</span>
-        <span class="countdown__label">Days</span>
-      </div>
-      <span class="countdown__separator" data-anim="fade" data-anim-delay="2">:</span>
-      <div class="countdown__item" data-anim="fade-up" data-anim-delay="2">
-        <span class="countdown__number" id="hours">--</span>
-        <span class="countdown__label">Hours</span>
-      </div>
-      <span class="countdown__separator" data-anim="fade" data-anim-delay="3">:</span>
-      <div class="countdown__item" data-anim="fade-up" data-anim-delay="3">
-        <span class="countdown__number" id="minutes">--</span>
-        <span class="countdown__label">Minutes</span>
-      </div>
-      <span class="countdown__separator" data-anim="fade" data-anim-delay="4">:</span>
-      <div class="countdown__item" data-anim="fade-up" data-anim-delay="4">
-        <span class="countdown__number" id="seconds">--</span>
-        <span class="countdown__label">Seconds</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Story Section -->
-  <section class="section story" id="story">
-    <div class="story__content">
-      <div class="story__photo-wrapper" data-anim="fade-left">
-        <img
-          class="story__photo"
-          src="2f751caf-5000-4c95-af5b-1660d606900d.jpg"
-          alt="Janaina and Chong"
-          width="240"
-          height="320"
-          loading="lazy"
-        >
-      </div>
-      <div class="story__body" data-anim="fade-right" data-anim-delay="1">
-        <p class="section__ornament">&mdash;</p>
-        <h2 class="section__title">Our Story</h2>
-        <div class="section__divider"></div>
-        <p class="section__text">
-          It started across a chessboard — small moves, long conversations,
-          and a connection that grew with each one. What began quietly became
-          the most beautiful thing in our lives. Now we are ready for our next
-          move together, surrounded by the people we love most, in one of the
-          most beautiful places on earth.
+      <div class="hero__content">
+        <p class="hero__save" data-anim="fade-scale" data-anim-delay="1">
+          <span class="hero__script">Save</span>
+          <span class="hero__the">the</span>
+          <span class="hero__script">Date</span>
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Venue Section -->
-  <section class="venue" id="venue">
-    <div class="venue__inner">
-      <p class="section__ornament" data-anim="fade">&mdash;</p>
-      <h2 class="section__title" data-anim="fade-up">The Venue</h2>
-      <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">The Edge &mdash; Uluwatu, Bali</p>
-      <div class="section__divider" data-anim="draw-line" data-anim-delay="2"></div>
-      <p class="section__text" data-anim="fade-up" data-anim-delay="2">
-        Perched on the dramatic cliffs of Uluwatu, The Edge is an exclusive
-        retreat where the sky meets the ocean. With sweeping panoramic views
-        of the Indian Ocean, lush tropical gardens, and the gentle sea breeze,
-        this will be the perfect setting to celebrate our love.
-      </p>
-
-      <div class="venue__image-wrapper" data-anim="fade-scale" data-anim-delay="2">
-        <img
-          class="venue__image"
-          src="Z-9gcHdAxsiBwTkw_theedgebali.avif"
-          alt="The Edge, Bali - Panoramic view"
-          width="700"
-          height="400"
-          loading="lazy"
-        >
+        <svg class="sprig" data-anim="fade" data-anim-delay="2" aria-hidden="true" focusable="false"><use href="#sprig"/></svg>
+        <p class="hero__label" data-anim="fade-up" data-anim-delay="2">The wedding of</p>
+        <h1 class="hero__names" data-anim="fade-up" data-anim-delay="3">
+          <span class="hero__name">Chong U</span>
+          <span class="hero__and">and</span>
+          <span class="hero__name">Janaína</span>
+        </h1>
+        <div class="rule" data-anim="draw-line" data-anim-delay="4" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
+        <p class="hero__date" data-anim="fade-up" data-anim-delay="4"><time datetime="2027-05-19">19 May 2027</time></p>
+        <span class="hero__short" data-anim="draw-line" data-anim-delay="5" aria-hidden="true"></span>
+        <p class="hero__location" data-anim="fade-up" data-anim-delay="5">The Edge<br>Bali</p>
+        <span class="diamond" data-anim="fade" data-anim-delay="5" aria-hidden="true"></span>
       </div>
 
-      <div class="venue__details">
-        <div class="venue__detail" data-anim="fade-up" data-anim-delay="1">
-          <span class="venue__detail-icon">&#9826;</span>
-          <span class="venue__detail-label">Date</span>
-          <span class="venue__detail-value">May 19, 2027</span>
+      <picture class="hero__landscape">
+        <source media="(min-width: 48rem)" srcset="images/paisagem-fundo-desktop.webp" width="1672" height="941">
+        <img src="images/paisagem-fundo-mobile.webp" alt="Watercolor of The Edge, Bali, on the cliffs above the ocean at sunset" width="1024" height="1536">
+      </picture>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section" id="countdown">
+      <h2 class="countdown-section__title" data-anim="fade-up">Counting the days</h2>
+      <div class="countdown" id="countdown-timer">
+        <div class="countdown__item" data-anim="fade-up" data-anim-delay="1">
+          <span class="countdown__number" id="days">---</span>
+          <span class="countdown__label">Days</span>
         </div>
-        <div class="venue__detail" data-anim="fade-up" data-anim-delay="2">
-          <span class="venue__detail-icon">&#9826;</span>
-          <span class="venue__detail-label">Venue</span>
-          <span class="venue__detail-value">The Edge, Uluwatu</span>
+        <div class="countdown__item" data-anim="fade-up" data-anim-delay="2">
+          <span class="countdown__number" id="hours">--</span>
+          <span class="countdown__label">Hours</span>
         </div>
-        <div class="venue__detail" data-anim="fade-up" data-anim-delay="3">
-          <span class="venue__detail-icon">&#9826;</span>
-          <span class="venue__detail-label">Location</span>
-          <span class="venue__detail-value">Bali, Indonesia</span>
+        <div class="countdown__item" data-anim="fade-up" data-anim-delay="3">
+          <span class="countdown__number" id="minutes">--</span>
+          <span class="countdown__label">Minutes</span>
+        </div>
+        <div class="countdown__item" data-anim="fade-up" data-anim-delay="4">
+          <span class="countdown__number" id="seconds">--</span>
+          <span class="countdown__label">Seconds</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Travel & Stay Section -->
-  <section class="section travel" id="travel">
-    <p class="section__ornament" data-anim="fade">&mdash;</p>
-    <h2 class="section__title" data-anim="fade-up">Travel & Stay</h2>
-    <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">Everything you need to know for the trip</p>
-    <div class="section__divider" data-anim="draw-line" data-anim-delay="2"></div>
+    <!-- Our Story -->
+    <section class="section story" id="story">
+      <img class="deco deco--story" src="images/orquideas-rosas-pequenas.webp" alt="" aria-hidden="true" width="718" height="760" loading="lazy" data-anim="fade-left">
+      <div class="story__content">
+        <div class="story__photo-wrapper" data-anim="fade-left">
+          <img class="story__photo" src="2f751caf-5000-4c95-af5b-1660d606900d.jpg" alt="Janaína and Chong U" width="240" height="320" loading="lazy">
+        </div>
+        <div class="story__body" data-anim="fade-right" data-anim-delay="1">
+          <h2 class="section__title">Our Story</h2>
+          <div class="rule rule--small" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
+          <p class="section__text">
+            It started across a chessboard — small moves, long conversations,
+            and a connection that grew with each one. What began quietly became
+            the most beautiful thing in our lives. Now we are ready for our next
+            move together, surrounded by the people we love most, in one of the
+            most beautiful places on earth.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <div class="travel__grid">
-      <div class="travel__card" data-anim="fade-up" data-anim-delay="1">
-        <span class="travel__card-icon">&#9992;</span>
-        <h3 class="travel__card-title">Getting There</h3>
-        <p class="travel__card-text">
-          Fly to Ngurah Rai International Airport (DPS). Direct flights
-          available from most major cities. We recommend arriving 1-2 days early.
+    <!-- Venue -->
+    <section class="venue" id="venue">
+      <img class="deco deco--venue-l" src="images/ramo-flores-rosa-creme.webp" alt="" aria-hidden="true" width="493" height="760" loading="lazy" data-anim="fade-left">
+      <img class="deco deco--venue-r" src="images/ramo-flores-amarelas.webp" alt="" aria-hidden="true" width="489" height="760" loading="lazy" data-anim="fade-right">
+      <div class="venue__inner">
+        <h2 class="section__title" data-anim="fade-up">The Venue</h2>
+        <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">The Edge &mdash; Uluwatu, Bali</p>
+        <div class="rule rule--small" data-anim="draw-line" data-anim-delay="2" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
+        <p class="section__text" data-anim="fade-up" data-anim-delay="2">
+          Perched on the dramatic cliffs of Uluwatu, The Edge is an exclusive
+          retreat where the sky meets the ocean. With sweeping panoramic views
+          of the Indian Ocean, lush tropical gardens, and the gentle sea breeze,
+          this will be the perfect setting to celebrate our love.
         </p>
-      </div>
-      <div class="travel__card" data-anim="fade-up" data-anim-delay="2">
-        <span class="travel__card-icon">&#9962;</span>
-        <h3 class="travel__card-title">Where to Stay</h3>
-        <p class="travel__card-text">
-          The Uluwatu area has wonderful resorts and villas. We'll share
-          a curated list of recommended accommodations closer to the date.
-        </p>
-      </div>
-      <div class="travel__card" data-anim="fade-up" data-anim-delay="3">
-        <span class="travel__card-icon">&#9788;</span>
-        <h3 class="travel__card-title">Weather</h3>
-        <p class="travel__card-text">
-          May is the start of dry season in Bali. Expect warm days
-          around 28-30&#176;C with beautiful sunsets over the ocean.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- FAQ Section -->
-  <section class="section faq" id="faq">
-    <p class="section__ornament" data-anim="fade">&mdash;</p>
-    <h2 class="section__title" data-anim="fade-up">FAQ</h2>
-    <div class="section__divider" data-anim="draw-line" data-anim-delay="1"></div>
+        <div class="venue__image-wrapper" data-anim="fade-scale" data-anim-delay="2">
+          <img class="venue__image" src="Z-9gcHdAxsiBwTkw_theedgebali.avif" alt="The Edge, Bali - Panoramic view" width="700" height="400" loading="lazy">
+        </div>
 
-    <div class="faq__list">
-      <div class="faq__item" data-anim="fade-up" data-anim-delay="1">
-        <h3 class="faq__question">Do I need a visa to travel to Bali?</h3>
-        <p class="faq__answer">
-          Most nationalities can obtain a Visa on Arrival (VOA) at the airport
-          for stays up to 30 days. Please check the latest requirements for your country.
-        </p>
+        <dl class="venue__details">
+          <div class="venue__detail" data-anim="fade-up" data-anim-delay="1">
+            <dt class="venue__detail-label">Date</dt>
+            <dd class="venue__detail-value">May 19, 2027</dd>
+          </div>
+          <div class="venue__detail" data-anim="fade-up" data-anim-delay="2">
+            <dt class="venue__detail-label">Venue</dt>
+            <dd class="venue__detail-value">The Edge, Uluwatu</dd>
+          </div>
+          <div class="venue__detail" data-anim="fade-up" data-anim-delay="3">
+            <dt class="venue__detail-label">Location</dt>
+            <dd class="venue__detail-value">Bali, Indonesia</dd>
+          </div>
+        </dl>
       </div>
-      <div class="faq__item" data-anim="fade-up" data-anim-delay="2">
-        <h3 class="faq__question">Can I bring my children?</h3>
-        <p class="faq__answer">
-          While we love your little ones, we have chosen to make this an
-          adults-only celebration so everyone can relax and enjoy the evening.
-        </p>
-      </div>
-      <div class="faq__item" data-anim="fade-up" data-anim-delay="2">
-        <h3 class="faq__question">What time should I arrive?</h3>
-        <p class="faq__answer">
-          The ceremony will begin in the late afternoon to catch the sunset.
-          We will share the detailed schedule closer to the date.
-        </p>
-      </div>
-      <div class="faq__item" data-anim="fade-up" data-anim-delay="3">
-        <h3 class="faq__question">Is there transportation from hotels?</h3>
-        <p class="faq__answer">
-          We will arrange shuttle service from recommended hotels to the venue.
-          Details will be shared once accommodations are confirmed.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- RSVP Section -->
-  <section class="section rsvp" id="rsvp">
-    <p class="section__ornament" data-anim="fade">&mdash;</p>
-    <h2 class="section__title" data-anim="fade-up">RSVP</h2>
-    <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">We would love to have you there</p>
-    <div class="section__divider" data-anim="draw-line" data-anim-delay="2"></div>
+    <!-- Travel & Stay -->
+    <section class="section travel" id="travel">
+      <img class="deco deco--travel" src="images/ave-do-paraiso.webp" alt="" aria-hidden="true" width="554" height="760" loading="lazy" data-anim="fade-right">
+      <h2 class="section__title" data-anim="fade-up">Travel & Stay</h2>
+      <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">Everything you need to know for the trip</p>
+      <div class="rule rule--small" data-anim="draw-line" data-anim-delay="2" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
 
-    <form class="rsvp__form" onsubmit="handleRSVP(event)">
-      <div class="rsvp__field" data-anim="fade-up" data-anim-delay="1">
-        <label class="rsvp__label" for="name">Full name</label>
-        <input class="rsvp__input" type="text" id="name" name="name" placeholder="Your name" required>
+      <div class="travel__grid">
+        <article class="travel__card" data-anim="fade-up" data-anim-delay="1">
+          <img class="travel__card-flower" src="images/flor-branca-tropical.webp" alt="" aria-hidden="true" width="760" height="732" loading="lazy">
+          <h3 class="travel__card-title">Getting There</h3>
+          <p class="travel__card-text">
+            Fly to Ngurah Rai International Airport (DPS). Direct flights
+            available from most major cities. We recommend arriving 1-2 days early.
+          </p>
+        </article>
+        <article class="travel__card" data-anim="fade-up" data-anim-delay="2">
+          <img class="travel__card-flower" src="images/orquidea-rosa-media.webp" alt="" aria-hidden="true" width="731" height="760" loading="lazy">
+          <h3 class="travel__card-title">Where to Stay</h3>
+          <p class="travel__card-text">
+            The Uluwatu area has wonderful resorts and villas. We'll share
+            a curated list of recommended accommodations closer to the date.
+          </p>
+        </article>
+        <article class="travel__card" data-anim="fade-up" data-anim-delay="3">
+          <img class="travel__card-flower" src="images/hibisco-amarelo.webp" alt="" aria-hidden="true" width="754" height="760" loading="lazy">
+          <h3 class="travel__card-title">Weather</h3>
+          <p class="travel__card-text">
+            May is the start of dry season in Bali. Expect warm days
+            around 28-30&#176;C with beautiful sunsets over the ocean.
+          </p>
+        </article>
       </div>
-      <div class="rsvp__field" data-anim="fade-up" data-anim-delay="2">
-        <label class="rsvp__label" for="email">Email</label>
-        <input class="rsvp__input" type="email" id="email" name="email" placeholder="you@email.com" required>
-      </div>
-      <div class="rsvp__field" data-anim="fade-up" data-anim-delay="2">
-        <label class="rsvp__label" for="guests">Number of guests</label>
-        <select class="rsvp__select" id="guests" name="guests">
-          <option value="1">1 guest</option>
-          <option value="2" selected>2 guests</option>
-          <option value="3">3 guests</option>
-          <option value="4">4 guests</option>
-        </select>
-      </div>
-      <div class="rsvp__field" data-anim="fade-up" data-anim-delay="3">
-        <label class="rsvp__label" for="companion">Guest name(s)</label>
-        <input class="rsvp__input" type="text" id="companion" name="companion" placeholder="If applicable">
-      </div>
-      <div class="rsvp__field" data-anim="fade-up" data-anim-delay="3">
-        <label class="rsvp__label" for="message">Message to the couple</label>
-        <textarea class="rsvp__textarea" id="message" name="message" placeholder="Leave a heartfelt message..."></textarea>
-      </div>
-      <button type="submit" class="rsvp__button" data-anim="fade-up" data-anim-delay="4">Confirm Attendance</button>
-      <p class="rsvp__note" data-anim="fade" data-anim-delay="4">Please confirm by March 19, 2027</p>
-    </form>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <img class="deco deco--faq" src="images/raminho-microflores-rosa.webp" alt="" aria-hidden="true" width="658" height="760" loading="lazy" data-anim="fade-left">
+      <h2 class="section__title" data-anim="fade-up">FAQ</h2>
+      <div class="rule rule--small" data-anim="draw-line" data-anim-delay="1" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
+
+      <div class="faq__list">
+        <details class="faq__item" data-anim="fade-up" data-anim-delay="1">
+          <summary class="faq__question">Do I need a visa to travel to Bali?</summary>
+          <p class="faq__answer">
+            Most nationalities can obtain a Visa on Arrival (VOA) at the airport
+            for stays up to 30 days. Please check the latest requirements for your country.
+          </p>
+        </details>
+        <details class="faq__item" data-anim="fade-up" data-anim-delay="2">
+          <summary class="faq__question">Can I bring my children?</summary>
+          <p class="faq__answer">
+            While we love your little ones, we have chosen to make this an
+            adults-only celebration so everyone can relax and enjoy the evening.
+          </p>
+        </details>
+        <details class="faq__item" data-anim="fade-up" data-anim-delay="2">
+          <summary class="faq__question">What time should I arrive?</summary>
+          <p class="faq__answer">
+            The ceremony will begin in the late afternoon to catch the sunset.
+            We will share the detailed schedule closer to the date.
+          </p>
+        </details>
+        <details class="faq__item" data-anim="fade-up" data-anim-delay="3">
+          <summary class="faq__question">Is there transportation from hotels?</summary>
+          <p class="faq__answer">
+            We will arrange shuttle service from recommended hotels to the venue.
+            Details will be shared once accommodations are confirmed.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section rsvp" id="rsvp">
+      <img class="deco deco--rsvp-l" src="images/orquidea-rosa-pontilhada.webp" alt="" aria-hidden="true" width="758" height="760" loading="lazy" data-anim="fade-left">
+      <img class="deco deco--rsvp-r" src="images/orquidea-lilas.webp" alt="" aria-hidden="true" width="741" height="760" loading="lazy" data-anim="fade-right">
+      <h2 class="section__title" data-anim="fade-up">RSVP</h2>
+      <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">We would love to have you there</p>
+      <div class="rule rule--small" data-anim="draw-line" data-anim-delay="2" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
+
+      <form class="rsvp__form" onsubmit="handleRSVP(event)">
+        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="1">
+          <label class="rsvp__label" for="name">Full name</label>
+          <input class="rsvp__input" type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="2">
+          <label class="rsvp__label" for="email">Email</label>
+          <input class="rsvp__input" type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required>
+        </div>
+        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="2">
+          <label class="rsvp__label" for="guests">Number of guests</label>
+          <select class="rsvp__select" id="guests" name="guests">
+            <option value="1">1 guest</option>
+            <option value="2" selected>2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+          </select>
+        </div>
+        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="3">
+          <label class="rsvp__label" for="companion">Guest name(s)</label>
+          <input class="rsvp__input" type="text" id="companion" name="companion" placeholder="If applicable">
+        </div>
+        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="3">
+          <label class="rsvp__label" for="message">Message to the couple</label>
+          <textarea class="rsvp__textarea" id="message" name="message" placeholder="Leave a heartfelt message..."></textarea>
+        </div>
+        <button type="submit" class="rsvp__button" data-anim="fade-up" data-anim-delay="4">Confirm Attendance</button>
+        <p class="rsvp__note" data-anim="fade" data-anim-delay="4">Please confirm by March 19, 2027</p>
+      </form>
+    </section>
+  </main>
+
   <footer>
-    <p class="footer__names" data-anim="fade-up">Janaina & Chong</p>
-    <p class="footer__date" data-anim="fade" data-anim-delay="1">19 &middot; 05 &middot; 2027 &mdash; Bali</p>
-    <span class="footer__heart" data-anim="fade-scale" data-anim-delay="2">&#10084;</span>
+    <img class="deco deco--foot-l" src="images/protea-rosa.webp" alt="" aria-hidden="true" width="760" height="748" loading="lazy">
+    <img class="deco deco--foot-r" src="images/hibisco-rosa.webp" alt="" aria-hidden="true" width="760" height="759" loading="lazy">
+    <p class="footer__names" data-anim="fade-up">Chong U <span>&amp;</span> Janaína</p>
+    <div class="rule rule--small" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
+    <p class="footer__date" data-anim="fade" data-anim-delay="1">19 May 2027 &middot; The Edge, Bali</p>
   </footer>
 
   <script src="main.js"></script>

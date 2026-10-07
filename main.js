@@ -69,7 +69,7 @@ function handleRSVP(event) {
 
   const button = form.querySelector('.rsvp__button');
   button.textContent = 'Confirmed!';
-  button.style.background = 'var(--color-accent-deep)';
+  button.style.background = 'var(--color-olive-deep)';
   button.disabled = true;
 
   // TODO: Replace with actual form submission (API endpoint)
