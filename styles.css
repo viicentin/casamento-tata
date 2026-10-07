@@ -116,22 +116,18 @@ nav {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Frosted glass bar: always on, a little more solid once the page scrolls */
-nav {
-  background: rgba(251, 247, 239, 0.9);
+/* Clear over the hero; turns into frosted glass once the page starts scrolling */
+nav.scrolled {
+  background: rgba(251, 247, 239, 0.92);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 24px rgba(62, 59, 31, 0.06);
 }
 
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  nav {
-    background: rgba(251, 247, 239, 0.38);
+  nav.scrolled {
+    background: rgba(251, 247, 239, 0.5);
     -webkit-backdrop-filter: blur(14px) saturate(150%);
     backdrop-filter: blur(14px) saturate(150%);
-  }
-
-  nav.scrolled {
-    background: rgba(251, 247, 239, 0.62);
   }
 }
 
@@ -455,9 +451,9 @@ nav a:hover {
 }
 
 .b-micro  { top: -24%; left: -30%; width: 82%; transform: rotate(-8deg); }
-.b-cream  { top: -20%; right: -26%; width: 56%; transform: rotate(28deg); }
-/* the top-right sprig again, upside down, closing the arch at the bottom left */
-.b-cream-low { bottom: -16%; left: -26%; width: 56%; transform: rotate(208deg); }
+.b-cream  { top: -16%; right: -20%; width: 54%; transform: rotate(-38deg); }
+/* the top-left sprig again, upside down, closing the arch at the bottom left */
+.b-micro-low { bottom: -22%; left: -30%; width: 76%; transform: scaleY(-1) rotate(8deg); }
 
 .story__photo-wrapper {
   width: 100%;
@@ -749,19 +745,49 @@ nav a:hover {
 footer {
   position: relative;
   overflow: clip;
+  display: grid;
+  place-items: center;
+  min-height: 112vw;
+  padding: var(--space-lg) var(--gutter);
   text-align: center;
-  padding: var(--space-lg) var(--gutter) var(--space-xl);
   background-color: var(--color-paper-2);
 }
 
-footer {
-  padding-bottom: 82vw;
-}
-
-footer > p,
-footer > .rule {
+/* narrow column so the names fit between the two flower arches */
+.footer__card {
   position: relative;
   z-index: 1;
+  width: min(54vw, 26rem);
+}
+
+.footer__names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-script);
+  font-size: clamp(2.6rem, 2rem + 3vw, 4.25rem);
+  line-height: 1.05;
+  color: var(--color-olive-deep);
+}
+
+.footer__amp {
+  font-size: 0.6em;
+  color: var(--color-gold-ink);
+}
+
+.footer__date {
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.8;
+  color: var(--color-ink-mid);
+}
+
+@media (min-width: 48rem) {
+  footer {
+    min-height: 34vw;
+  }
 }
 
 /* Same flowers as the top of the hero, flipped so the arch rises from the bottom */
@@ -783,41 +809,13 @@ footer > .rule {
 .footer__flowers .f-white    { top: auto; bottom: calc(1rem + 38vw); transform: scaleY(-1) rotate(-20deg); }
 
 @media (min-width: 48rem) {
-  footer {
-    padding-top: var(--space-xl);
-    padding-bottom: 24vw;
-  }
-
-  .footer__flowers .f-buds     { bottom: -7vw; }
-  .footer__flowers .f-hibiscus { bottom: 0.5rem; }
-  .footer__flowers .f-orchids  { bottom: calc(1rem + 22vw); }
-  .footer__flowers .f-micro    { bottom: -7vw; }
-  .footer__flowers .f-lilac    { bottom: 0.5rem; }
-  .footer__flowers .f-white    { bottom: 9vw; }
-}
-
-.footer__names {
-  text-wrap: balance;
-  font-weight: 500;
-  font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.footer__names span {
-  font-family: var(--font-script);
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 1.4em;
-  color: var(--color-olive);
-}
-
-.footer__date {
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--color-ink-mid);
+  /* pulled in from the edges so the arch hugs the names */
+  .footer__flowers .f-buds     { bottom: -5vw; left: 26vw; }
+  .footer__flowers .f-hibiscus { bottom: -2vw; left: 5vw; }
+  .footer__flowers .f-orchids  { bottom: calc(1rem + 17vw); left: 2vw; }
+  .footer__flowers .f-micro    { bottom: -5vw; right: 30vw; }
+  .footer__flowers .f-lilac    { bottom: -1vw; right: 11vw; }
+  .footer__flowers .f-white    { bottom: 13vw; right: 4vw; }
 }
 
 /* ── Motion ── */
