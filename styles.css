@@ -116,15 +116,22 @@ nav {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav.scrolled {
-  background: rgba(251, 247, 239, 0.94);
-  box-shadow: 0 1px 0 var(--color-border);
+/* Frosted glass bar: always on, a little more solid once the page scrolls */
+nav {
+  background: rgba(251, 247, 239, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 24px rgba(62, 59, 31, 0.06);
 }
 
-@supports (backdrop-filter: blur(8px)) {
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  nav {
+    background: rgba(251, 247, 239, 0.38);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
+    backdrop-filter: blur(14px) saturate(150%);
+  }
+
   nav.scrolled {
-    background: rgba(251, 247, 239, 0.82);
-    backdrop-filter: blur(8px);
+    background: rgba(251, 247, 239, 0.62);
   }
 }
 
@@ -410,8 +417,6 @@ nav a:hover {
 .deco--faq     { top: 1rem;  left: -12vw; width: 40vw; }
 .deco--rsvp-l  { top: 0.5rem; left: -15vw; width: 44vw; }
 .deco--rsvp-r  { bottom: 1rem; right: -15vw; width: 42vw; }
-.deco--foot-l  { bottom: -3rem; left: -12vw; width: 42vw; }
-.deco--foot-r  { bottom: -2rem; right: -12vw; width: 40vw; scale: -1 1; }
 
 @media (min-width: 48rem) {
   .deco--venue-l { top: 2rem;  left: -2vw;  width: 17vw; }
@@ -420,8 +425,6 @@ nav a:hover {
   .deco--faq     { left: -2vw;  width: 21vw; }
   .deco--rsvp-l  { left: -4vw;  width: 25vw; }
   .deco--rsvp-r  { right: -4vw; width: 24vw; }
-  .deco--foot-l  { left: -3vw;  width: 22vw; }
-  .deco--foot-r  { right: -3vw; width: 21vw; }
 }
 
 /* ── Our Story ── */
@@ -453,8 +456,8 @@ nav a:hover {
 
 .b-micro  { top: -24%; left: -30%; width: 82%; transform: rotate(-8deg); }
 .b-cream  { top: -20%; right: -26%; width: 56%; transform: rotate(28deg); }
-.b-buds   { top: 30%;  left: -30%; width: 46%; transform: rotate(12deg); }
-.b-yellow { bottom: -12%; right: -28%; width: 52%; transform: rotate(-16deg); }
+/* the top-right sprig again, upside down, closing the arch at the bottom left */
+.b-cream-low { bottom: -16%; left: -26%; width: 56%; transform: rotate(208deg); }
 
 .story__photo-wrapper {
   width: 100%;
@@ -751,10 +754,46 @@ footer {
   background-color: var(--color-paper-2);
 }
 
+footer {
+  padding-bottom: 82vw;
+}
+
 footer > p,
 footer > .rule {
   position: relative;
   z-index: 1;
+}
+
+/* Same flowers as the top of the hero, flipped so the arch rises from the bottom */
+.footer__flowers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.footer__flowers .flower {
+  animation: none;
+}
+
+.footer__flowers .f-buds     { top: auto; bottom: -16vw; transform: scaleY(-1) rotate(-35deg); }
+.footer__flowers .f-hibiscus { top: auto; bottom: 0.5rem; transform: scaleY(-1) rotate(-28deg); }
+.footer__flowers .f-orchids  { top: auto; bottom: calc(1rem + 40vw); transform: scaleY(-1) rotate(80deg); }
+.footer__flowers .f-micro    { top: auto; bottom: -14vw; transform: scaleY(-1) rotate(170deg); }
+.footer__flowers .f-lilac    { top: auto; bottom: 0.5rem; transform: scale(-1, -1) rotate(-12deg); }
+.footer__flowers .f-white    { top: auto; bottom: calc(1rem + 38vw); transform: scaleY(-1) rotate(-20deg); }
+
+@media (min-width: 48rem) {
+  footer {
+    padding-top: var(--space-xl);
+    padding-bottom: 24vw;
+  }
+
+  .footer__flowers .f-buds     { bottom: -7vw; }
+  .footer__flowers .f-hibiscus { bottom: 0.5rem; }
+  .footer__flowers .f-orchids  { bottom: calc(1rem + 22vw); }
+  .footer__flowers .f-micro    { bottom: -7vw; }
+  .footer__flowers .f-lilac    { bottom: 0.5rem; }
+  .footer__flowers .f-white    { bottom: 9vw; }
 }
 
 .footer__names {
