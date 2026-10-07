@@ -89,7 +89,7 @@ img {
   display: block;
   width: 6.5rem;
   height: 1.3rem;
-  margin: 0.25rem auto 0;
+  margin: 0.35rem auto 0.5rem;
   color: var(--color-olive);
 }
 
@@ -164,52 +164,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.hero__save {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--color-olive-deep);
-  line-height: 1;
-}
-
-.hero__script {
-  font-family: var(--font-script);
-  font-size: clamp(4rem, 2.6rem + 7vw, 7.5rem);
-  font-weight: 400;
-  line-height: 0.95;
-}
-
-.hero__script:first-child {
-  margin-right: 0.6em;
-}
-
-.hero__script:last-child {
-  margin-left: 0.5em;
-}
-
-/* "— THE —" between the two script words */
-.hero__the {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--color-ink);
-  margin: 0.15rem 0 0.35rem;
-}
-
-.hero__the::before,
-.hero__the::after {
-  content: '';
-  width: 2.25rem;
-  height: 1px;
-  background: var(--color-gold);
-}
-
 .hero__label {
-  margin-top: var(--space-sm);
   font-size: clamp(0.8rem, 0.75rem + 0.3vw, 0.95rem);
   font-weight: 600;
   letter-spacing: 0.24em;
@@ -227,25 +182,25 @@ nav a:hover {
 }
 
 .hero__name {
-  font-size: clamp(1.75rem, 1.2rem + 3vw, 3.25rem);
-  letter-spacing: 0.22em;
-  /* letter-spacing adds space after the last letter too; this keeps the word centered */
-  margin-right: -0.22em;
-  text-transform: uppercase;
-  line-height: 1.15;
+  font-family: var(--font-script);
+  font-size: clamp(3.6rem, 2.4rem + 6vw, 6.75rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--color-olive-deep);
 }
 
-/* "—— and ——" in script */
+/* "—— AND ——" between the names */
 .hero__and {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  width: min(100%, 22rem);
-  font-family: var(--font-script);
-  font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem);
-  font-weight: 400;
-  color: var(--color-olive);
-  line-height: 1.3;
+  gap: 0.9rem;
+  width: min(100%, 18rem);
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin: 0.1rem 0 0.2rem;
 }
 
 .hero__and::before,
@@ -309,17 +264,19 @@ nav a:hover {
   user-select: none;
 }
 
-.f-buds     { top: -2vw;  left: 20vw;  width: 15vw; transform: rotate(-12deg); }
-.f-hibiscus { top: 1rem;  left: -15vw; width: 44vw; transform: rotate(-10deg); }
-.f-orchids  { top: calc(1rem + 36vw); left: -15vw; width: 30vw; }
-.f-micro    { top: -3vw;  right: 20vw; width: 20vw; transform: scaleX(-1); }
-.f-lilac    { top: 1rem;  right: -12vw; width: 38vw; }
-.f-white    { top: calc(1rem + 32vw); right: -12vw; width: 26vw; }
-.f-bird     { top: calc(5.5rem + 100vw); right: -14vw; width: 26vw; }
-.f-yellows  { bottom: 52vw; left: -10vw; width: 22vw; transform: rotate(8deg); }
-.f-protea   { bottom: -6vw; left: -12vw; width: 42vw; }
-.f-gold     { bottom: 10vw; right: -12vw; width: 38vw; }
-.f-dotted   { bottom: -8vw; right: 18vw; width: 28vw; }
+/* Turned so the stems run off the edge and the blossoms face the card.
+   Top corners arch down the sides; the bottom corners mirror them, rising from the landscape. */
+.f-buds     { top: -16vw; left: 20vw;  width: 17vw; transform: rotate(-35deg); }
+.f-hibiscus { top: 0.5rem; left: -21vw; width: 52vw; transform: rotate(-28deg); }
+.f-orchids  { top: calc(1rem + 40vw); left: -17vw; width: 34vw; transform: rotate(80deg); }
+.f-micro    { top: -14vw; right: 22vw; width: 24vw; transform: rotate(170deg); }
+.f-lilac    { top: 0.5rem; right: -19vw; width: 46vw; transform: scaleX(-1) rotate(-12deg); }
+.f-white    { top: calc(1rem + 38vw); right: -13vw; width: 31vw; transform: rotate(-20deg); }
+.f-bird     { top: calc(4rem + 92vw); right: -16vw; width: 28vw; transform: rotate(-55deg); }
+.f-yellows  { bottom: 40vw; left: -12vw; width: 26vw; transform: rotate(14deg); }
+.f-protea   { bottom: -6vw; left: -16vw; width: 50vw; transform: rotate(22deg); }
+.f-dotted   { bottom: 34vw; right: -14vw; width: 32vw; transform: rotate(-12deg); }
+.f-gold     { bottom: -7vw; right: -16vw; width: 48vw; transform: rotate(-18deg); }
 
 @media (min-width: 48rem) {
   .hero {
@@ -330,17 +287,17 @@ nav a:hover {
     padding-top: 6.5rem;
   }
 
-  .f-buds     { top: -1vw;  left: 17vw;  width: 9vw; }
-  .f-hibiscus { top: 1.5rem; left: -4vw; width: 26vw; }
-  .f-orchids  { top: calc(1.5rem + 20vw); left: -3vw; width: 17vw; }
-  .f-micro    { top: -1vw;  right: 19vw; width: 12vw; }
-  .f-lilac    { top: 2rem;  right: 6vw;  width: 17vw; }
-  .f-white    { top: 4rem;  right: -3vw; width: 15vw; }
-  .f-bird     { top: calc(4rem + 15vw); right: 1vw; width: 15vw; }
-  .f-yellows  { top: calc(1.5rem + 36vw); bottom: auto; left: 1vw; width: 10vw; }
-  .f-protea   { bottom: -3vw; left: -3vw; width: 22vw; }
-  .f-gold     { bottom: 3vw;  right: -3vw; width: 20vw; }
-  .f-dotted   { bottom: -3vw; right: 14vw; width: 15vw; }
+  .f-buds     { top: -7vw;  left: 18vw;  width: 10vw; }
+  .f-hibiscus { top: 0.5rem; left: -5vw; width: 29vw; }
+  .f-orchids  { top: calc(1rem + 22vw); left: -6vw; width: 19vw; }
+  .f-micro    { top: -7vw;  right: 21vw; width: 13vw; }
+  .f-lilac    { top: 0.5rem; right: 4vw; width: 20vw; }
+  .f-white    { top: 9vw;   right: 0;    width: 15vw; }
+  .f-bird     { top: calc(4rem + 19vw); right: -5vw; width: 17vw; }
+  .f-yellows  { bottom: 17vw; left: -2vw; width: 12vw; }
+  .f-protea   { bottom: -5vw; left: -5vw; width: 26vw; }
+  .f-dotted   { bottom: 15vw; right: -3vw; width: 16vw; }
+  .f-gold     { bottom: -5vw; right: -5vw; width: 25vw; }
 }
 
 @media (min-width: 64rem) {
@@ -446,26 +403,25 @@ nav a:hover {
   user-select: none;
 }
 
-.deco--story   { top: 1rem;  right: -12vw; width: 34vw; scale: -1 1; }
-.deco--venue-l { top: 2rem;  left: -9vw;  width: 22vw; }
-.deco--venue-r { bottom: 2rem; right: -9vw; width: 22vw; }
-.deco--travel  { top: 1rem;  right: -10vw; width: 28vw; }
-.deco--faq     { top: 1.5rem; left: -10vw; width: 28vw; }
-.deco--rsvp-l  { top: 1rem;  left: -12vw; width: 32vw; }
-.deco--rsvp-r  { bottom: 1rem; right: -12vw; width: 30vw; }
-.deco--foot-l  { bottom: -3rem; left: -10vw; width: 30vw; }
-.deco--foot-r  { bottom: -2rem; right: -10vw; width: 28vw; scale: -1 1; }
+/* rotate (not transform) so the turn survives the scroll-in animation */
+.deco--venue-l { top: 1.5rem; left: -12vw; width: 34vw; rotate: 12deg; }
+.deco--venue-r { bottom: -3rem; right: -16vw; width: 34vw; rotate: -24deg; }
+.deco--travel  { top: 0.5rem; right: -14vw; width: 40vw; rotate: -25deg; }
+.deco--faq     { top: 1rem;  left: -12vw; width: 40vw; }
+.deco--rsvp-l  { top: 0.5rem; left: -15vw; width: 44vw; }
+.deco--rsvp-r  { bottom: 1rem; right: -15vw; width: 42vw; }
+.deco--foot-l  { bottom: -3rem; left: -12vw; width: 42vw; }
+.deco--foot-r  { bottom: -2rem; right: -12vw; width: 40vw; scale: -1 1; }
 
 @media (min-width: 48rem) {
-  .deco--story   { top: 2rem;  right: -2vw; width: 16vw; }
-  .deco--venue-l { top: 3rem;  left: -1vw;  width: 11vw; }
-  .deco--venue-r { right: -1vw; width: 11vw; }
-  .deco--travel  { right: -2vw; width: 14vw; }
-  .deco--faq     { left: -1vw;  width: 15vw; }
-  .deco--rsvp-l  { left: -3vw;  width: 18vw; }
-  .deco--rsvp-r  { right: -3vw; width: 17vw; }
-  .deco--foot-l  { left: -2vw;  width: 16vw; }
-  .deco--foot-r  { right: -2vw; width: 15vw; }
+  .deco--venue-l { top: 2rem;  left: -2vw;  width: 17vw; }
+  .deco--venue-r { bottom: 1rem; right: -2vw; width: 17vw; }
+  .deco--travel  { right: -3vw; width: 20vw; }
+  .deco--faq     { left: -2vw;  width: 21vw; }
+  .deco--rsvp-l  { left: -4vw;  width: 25vw; }
+  .deco--rsvp-r  { right: -4vw; width: 24vw; }
+  .deco--foot-l  { left: -3vw;  width: 22vw; }
+  .deco--foot-r  { right: -3vw; width: 21vw; }
 }
 
 /* ── Our Story ── */
@@ -480,9 +436,28 @@ nav a:hover {
   gap: var(--space-md);
 }
 
-.story__photo-wrapper {
+/* The photo sits behind a bouquet of sprigs that arches over it */
+.story__frame {
+  position: relative;
   flex-shrink: 0;
-  width: min(60vw, 15rem);
+  width: min(62vw, 16rem);
+  margin: 4rem 0 1.5rem;
+}
+
+.bouquet {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.b-micro  { top: -24%; left: -30%; width: 82%; transform: rotate(-8deg); }
+.b-cream  { top: -20%; right: -26%; width: 56%; transform: rotate(28deg); }
+.b-buds   { top: 30%;  left: -30%; width: 46%; transform: rotate(12deg); }
+.b-yellow { bottom: -12%; right: -28%; width: 52%; transform: rotate(-16deg); }
+
+.story__photo-wrapper {
+  width: 100%;
   aspect-ratio: 3 / 4;
   border-radius: 999px 999px 0.25rem 0.25rem;
   overflow: hidden;
@@ -500,6 +475,7 @@ nav a:hover {
 @media (min-width: 48rem) {
   .story__content {
     flex-direction: row;
+    gap: 6rem;
     text-align: left;
   }
 
