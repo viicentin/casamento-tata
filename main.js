@@ -61,16 +61,32 @@ function updateNav() {
 window.addEventListener('scroll', updateNav, { passive: true });
 updateNav();
 
+// ── RSVP: the form opens only when the guest asks for it ──
+const rsvpForm = document.getElementById('rsvp-form');
+const rsvpStart = document.querySelector('.rsvp__start');
+const rsvpOpen = document.getElementById('rsvp-open');
+
+function toggleRSVP(open) {
+  rsvpForm.hidden = !open;
+  rsvpStart.hidden = open;
+  rsvpOpen.setAttribute('aria-expanded', String(open));
+  (open ? rsvpForm.querySelector('#name') : rsvpOpen).focus();
+}
+
+rsvpOpen.addEventListener('click', () => toggleRSVP(true));
+document.getElementById('rsvp-cancel').addEventListener('click', () => toggleRSVP(false));
+
 // ── RSVP Placeholder ──
 function handleRSVP(event) {
   event.preventDefault();
   const form = event.target;
   const name = form.querySelector('#name').value;
 
-  const button = form.querySelector('.rsvp__button');
+  const button = form.querySelector('[type="submit"]');
   button.textContent = 'Confirmed!';
   button.style.background = 'var(--color-olive-deep)';
   button.disabled = true;
+  document.getElementById('rsvp-cancel').hidden = true;
 
   // TODO: Replace with actual form submission (API endpoint)
   console.log('RSVP submitted:', {

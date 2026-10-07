@@ -103,10 +103,8 @@
           <div class="story__photo-wrapper">
             <img class="story__photo" src="2f751caf-5000-4c95-af5b-1660d606900d.jpg" alt="Janaína and Chong U" width="240" height="320" loading="lazy">
           </div>
-          <!-- bouquet arching over the photo -->
-          <img class="bouquet b-micro"  src="images/raminho-microflores-rosa.webp" alt="" aria-hidden="true" width="658" height="760" loading="lazy">
-          <img class="bouquet b-cream"  src="images/ramo-flores-rosa-creme.webp"   alt="" aria-hidden="true" width="493" height="760" loading="lazy">
-          <img class="bouquet b-micro-low" src="images/raminho-microflores-rosa.webp" alt="" aria-hidden="true" width="658" height="760" loading="lazy">
+          <!-- garland curving around the left side of the photo -->
+          <img class="bouquet b-garland" src="images/arco-ramos.webp" alt="" aria-hidden="true" width="640" height="1133" loading="lazy">
         </div>
         <div class="story__body" data-anim="fade-right" data-anim-delay="1">
           <h2 class="section__title">Our Story</h2>
@@ -239,16 +237,21 @@
       <p class="section__subtitle" data-anim="fade-up" data-anim-delay="1">We would love to have you there</p>
       <div class="rule rule--small" data-anim="draw-line" data-anim-delay="2" aria-hidden="true"><svg><use href="#bloom"/></svg></div>
 
-      <form class="rsvp__form" onsubmit="handleRSVP(event)">
-        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="1">
+      <div class="rsvp__start" data-anim="fade-up" data-anim-delay="3">
+        <button type="button" class="rsvp__button" id="rsvp-open" aria-expanded="false" aria-controls="rsvp-form">Confirm Attendance</button>
+        <p class="rsvp__note">Please confirm by March 19, 2027</p>
+      </div>
+
+      <form class="rsvp__form" id="rsvp-form" onsubmit="handleRSVP(event)" hidden>
+        <div class="rsvp__field">
           <label class="rsvp__label" for="name">Full name</label>
           <input class="rsvp__input" type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
         </div>
-        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="2">
+        <div class="rsvp__field">
           <label class="rsvp__label" for="email">Email</label>
           <input class="rsvp__input" type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required>
         </div>
-        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="2">
+        <div class="rsvp__field">
           <label class="rsvp__label" for="guests">Number of guests</label>
           <select class="rsvp__select" id="guests" name="guests">
             <option value="1">1 guest</option>
@@ -257,16 +260,18 @@
             <option value="4">4 guests</option>
           </select>
         </div>
-        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="3">
+        <div class="rsvp__field">
           <label class="rsvp__label" for="companion">Guest name(s)</label>
           <input class="rsvp__input" type="text" id="companion" name="companion" placeholder="If applicable">
         </div>
-        <div class="rsvp__field" data-anim="fade-up" data-anim-delay="3">
+        <div class="rsvp__field">
           <label class="rsvp__label" for="message">Message to the couple</label>
           <textarea class="rsvp__textarea" id="message" name="message" placeholder="Leave a heartfelt message..."></textarea>
         </div>
-        <button type="submit" class="rsvp__button" data-anim="fade-up" data-anim-delay="4">Confirm Attendance</button>
-        <p class="rsvp__note" data-anim="fade" data-anim-delay="4">Please confirm by March 19, 2027</p>
+        <div class="rsvp__actions">
+          <button type="button" class="rsvp__button rsvp__button--ghost" id="rsvp-cancel">Cancel</button>
+          <button type="submit" class="rsvp__button">Send</button>
+        </div>
       </form>
     </section>
   </main>
